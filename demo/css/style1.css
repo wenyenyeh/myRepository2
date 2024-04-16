@@ -1,0 +1,357 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =================== */
+/*     自己改的樣式     */
+/* =================== */
+header {
+    background-color: #fef5d4;
+    height: 80px;
+    width: 100%;
+
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+    letter-spacing: 4px;
+}
+
+header li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+header a {
+    color: #e79e50;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header a:hover {
+    text-decoration: underline;
+    color: #e79e50;
+}
+
+body,
+blockquote {
+    font-family: "Microsoft yahei";
+}
+
+.h2,
+.a,
+.p {
+    font-family: "Microsoft yahei";
+}
+
+h2 {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    font-size: 32px;
+}
+
+.pt-3>li {
+    padding: 10px;
+}
+
+/* =============表單樣式============= */
+
+#wrap {
+    width: 1000px;
+    height: 520px;
+    font-family: "Microsoft yahei";
+    margin: 30px  auto;
+    padding-bottom: 30px;
+}
+
+#tab {
+    width: 1000px;
+    height: 50px;
+
+}
+
+.tab {
+    width: 200px;
+    height: 50px;
+    background: #f5d398;
+    color:sienna;
+    float: left;
+    text-align: center;
+    line-height: 50px;
+    margin: 0;
+    padding: auto;
+}
+
+.tab.active {
+    height: 50px;
+    background:mistyrose;
+    color:darkred;
+    border-top: 3px solid #e65e3c;
+    box-sizing: border-box;
+}
+
+.box {
+
+    display: none;
+
+}
+
+.box.active {
+    display: inherit;
+}
+
+.img {
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+
+.img img {
+    width: 500px;
+    height: 500px;
+    float: left;
+}
+
+.news {
+    width: 500px;
+    height: 500px;
+    background: #CFCFEA;
+    float: left;
+}
+
+.news-wrap {
+    height: 500px;
+    background: #FCF7F8;
+    padding: 0px 5px;
+    margin: 0;
+}
+
+.news-wrap>p,.news-wrap>h5{
+    padding-top: 5px;
+    text-align: center;
+}
+
+.news-title{
+    margin: 0;
+}
+.news-content{
+    margin-top: 20px;
+    width: 500px;
+    height: 500px;
+}
+
+.news-icon{
+    height: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.news-icon>a {
+    width: 10%;
+    font-size: 24px;
+    padding: 10px;
+}
+
+
+/* icon */
+.icon {
+    height: 100px;
+    padding: 10px;
+    text-align: center;
+    background-color: #b0beaf;
+}
+
+.icon>a {
+    width: 10%;
+    text-align: right;
+    font-size: 24px;
+    /*調整icon大小*/
+    padding: 10px;
+    /*調整icon間距*/
+}
+
+.icon>p {
+    color: white;
+    padding: 20px;
+}
+
+
+footer {
+    background-color: #b0beaf;
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+#pagetop {
+    position: fixed;
+    /*固定定位*/
+    right: 20px;
+    /*右邊界*/
+    bottom: 20px;
+    /*下邊界*/
+    display: block;
+    /*顯示為塊級元素*/
+    width: 80px;
+    /*寬度*/
+    height: 80px;
+    /*高度*/
+    line-height: 80px;
+    /*行高*/
+    text-align: center;
+    /*文字置中*/
+    text-decoration: none;
+    /*移除底線*/
+}
+
+/* rwd */
+@media (min-width: 575.98px) {
+    .container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .container {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}

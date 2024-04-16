@@ -1,0 +1,408 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* =================== */
+/*     自己改的樣式     */
+/* =================== */
+header {
+    background-color: #fef5d4;
+    height: 80px;
+    width: 100%;
+}
+
+header ul {
+    position: absolute;
+    right: 5vw;
+    top: 0;
+    line-height: 80px;
+    letter-spacing: 4px;
+
+}
+
+
+header li {
+    display: inline;
+    margin-right: 4vw;
+}
+
+header a {
+    color: #e79e50;
+    text-decoration: none;
+    padding: 10px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+/* ================================================================ */
+/*                               內文                                */
+/* ================================================================== */
+
+body,
+blockquote {
+    font-family: "Microsoft yahei";
+}
+
+.h2,
+.a,
+.p {
+    font-family: "Microsoft yahei";
+}
+
+.news {
+    background-color: white;
+    color: white;
+    height: 100vh;
+    background-image: url("../img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.news h2 {
+    font-size: 60px;
+    margin-top: 60px;
+}
+
+.news p {
+    font-size: 18px;
+    margin: 25px;
+}
+
+.news a {
+    color: white;
+    text-decoration: none;
+    border: 1px solid #acacac;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.slogan {
+    background-color: #acacac;
+    color: white;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    line-height: 1.8em;
+}
+
+footer {
+    background-color: #b0beaf;
+    color: white;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+}
+
+.shop {
+    display: flex;
+}
+
+
+.shop img {
+    width: 50%;
+}
+
+.info {
+    width: 50%;
+    background-color: #f7f0d6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.info h2 {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.info p {
+    text-align: center;
+    font-size: 18px;
+}
+
+
+
+#pagetop {
+    position: fixed;
+    /*固定定位*/
+    right: 20px;
+    /*右邊界*/
+    bottom: 20px;
+    /*下邊界*/
+    display: block;
+    /*顯示為塊級元素*/
+    width: 80px;
+    /*寬度*/
+    height: 80px;
+    /*高度*/
+    line-height: 80px;
+    /*行高*/
+    text-align: center;
+    /*文字置中*/
+    text-decoration: none;
+    /*移除底線*/
+    border-radius: 50%;
+    /*圓角*/
+}
+
+/* 產品專區 */
+.container {
+    background-color:rgb(236, 196, 202);
+
+}
+
+.container h2 {
+    font-size: 30px;
+    text-align: center;
+    padding: 60px;
+}
+
+/* 磚塊容器 */
+.img-container {
+    display: flex;
+    width: 100vw;
+    min-width: 1325px;
+    height: 438px;
+}
+
+/* 每個圖片的外框，為了讓圖片縮放的時候，超出部分隱藏 */
+.img-box {
+    overflow: hidden;
+    width: 50%;
+    border: 1px solid #acacac;
+}
+
+/* 圖片 */
+.img-box img {
+    width: 100%;
+    transition: all .5s ease-in-out;
+    transform: scale(1);
+}
+
+/* 圖片滑過 */
+.img-box img:hover {
+    transform: scale(1.05);
+}
+
+/* 圖片暗色系，利用 filter 的 brightness 可以設定暗度 */
+.img-box img.dark {
+    filter: brightness(70%);
+}
+
+/* 列的樣式 */
+.row {
+    display: flex;
+    height: 50%;
+}
+
+/* 欄的樣式 */
+.row .col {
+    overflow: hidden;
+    width: 50%;
+    border: 1px solid #acacac;
+}
+
+/* icon */
+.icon {
+    height: 80px;
+    padding: 20px;
+    text-align: center;
+    background-color: #b0beaf;
+}
+
+.icon>a {
+    width: 10%;
+    text-align: right;
+    font-size: 24px;
+    /*調整icon大小*/
+    padding: 10px;
+    /*調整icon間距*/
+
+}
+
+.icon>p {
+    color: white;
+    padding: 10px;
+}
+
+
+
+/* rwd */
+@media (min-width: 575.98px) {
+    .container {
+        grid-template-columns: auto auto;
+    }
+}
+
+@media (min-width: 991.98px) {
+    .container {
+        grid-template-columns: auto auto auto auto auto;
+    }
+}
+
+@media (max-width:776px) {
+    header {
+        background-color: #fef5d4;
+        height: 160px;
+        width: 100%;
+    }
+
+    ul {
+        margin-top: 80px;
+    }
+
+    .news h2 {
+        font-size: 50px;
+        margin-top: 60px;
+    }
+
+}

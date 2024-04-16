@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人小專題</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+    integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+  <style>
+    header {
+      background-color: #fef5d4;
+      height: 80px;
+      width: 100%;
+
+    }
+
+    header ul {
+      position: absolute;
+      right: 5vw;
+      top: 0;
+      line-height: 80px;
+      letter-spacing: 4px;
+    }
+
+    header li {
+      display: inline;
+      margin-right: 4vw;
+    }
+
+    header a {
+      color: #e79e50;
+      text-decoration: none;
+      padding: 10px;
+    }
+
+    header a:hover {
+      text-decoration: underline;
+      color: #e79e50;
+    }
+
+    body,
+    blockquote {
+      font-family: "Microsoft yahei";
+    }
+
+    .h2,
+    .a,
+    .p {
+      font-family: "Microsoft yahei";
+    }
+
+    h2 {
+      text-align: center;
+      padding: 30px;
+    }
+
+    .product {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 30px
+    }
+
+    .product div {
+      width: 300px;
+      text-align: center;
+    }
+
+    .product img {
+      width: 80%;
+      border-radius: 10px;
+    }
+
+    .product h3 {
+      font-size: 20px;
+      margin: 20px 0;
+    }
+
+    .product p {
+      font-size: 14px;
+      line-height: 1.6em;
+    }
+
+    /* icon */
+    .icon {
+      height: 130px;
+      padding: 10px;
+      text-align: center;
+      background-color: #b0beaf;
+    }
+
+    .icon>a {
+      width: 10%;
+      text-align: right;
+      font-size: 24px;
+      /*調整icon大小*/
+      padding: 10px;
+      /*調整icon間距*/
+    }
+
+    .icon>p {
+      color: white;
+      padding: 10px;
+    }
+
+    footer {
+      background-color: #b0beaf;
+      color: white;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    #pagetop {
+      position: fixed;
+      /*固定定位*/
+      right: 20px;
+      /*右邊界*/
+      bottom: 20px;
+      /*下邊界*/
+      display: block;
+      /*顯示為塊級元素*/
+      width: 80px;
+      /*寬度*/
+      height: 80px;
+      /*高度*/
+      line-height: 80px;
+      /*行高*/
+      text-align: center;
+      /*文字置中*/
+      text-decoration: none;
+      /*移除底線*/
+    }
+
+    @media (max-width:776px) {
+      header {
+        background-color: #fef5d4;
+        height: 160px;
+        width: 100%;
+      }
+
+      ul {
+        margin-top: 80px;
+      }
+
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <a href="./index.html"><img src="./img/logo.png" style="position:relative;left:40px;"></a>
+
+    <nav>
+      <ul>
+        <a href="./about.html">關於我們</a>
+        <a href="./product.html">產品專區</a>
+        <a href="./store.html">店鋪資訊</a>
+        <a href="./members.html">會員專區</a>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="container wow animate__animated animate__zoomIn" data-wow-duration="1s">
+      <h2 style="text-align: center;">產品專區</h2>
+      <div class="row">
+        <div class="col-12 col-sm-4">
+          <div class="img-thumbnail">
+            <img class="rounded" src="./img/a1.jpg" style="max-width:100%">
+            <h3>果汁</h3>
+            <p>我們的蔬果汁結合了新鮮蔬菜和水果的天然精華，為您提供一杯充滿營養的健康飲品。每一口都是對您健康的投資，讓您享受到來自大自然的活力與美味！</p>
+            <p><a class="=btn btn-info" href="#juice">查看更多 &raquo</a></p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div class="img-thumbnail">
+            <img class="rounded" src="./img/a2.jpg" style="max-width:100%">
+            <h3>果昔</h3>
+            <p>您想要一杯充滿活力和營養的飲品嗎？我們的果昔結合了新鮮的水果和蔬菜，為您提供健康美味的選擇。一口果昔，讓您充滿活力，為每一天帶來健康的開始！</p>
+            <p><a class="=btn btn-info" href="#smoothie">查看更多 &raquo</a></p>
+          </div>
+        </div>
+        <div class="col-12 col-sm-4">
+          <div class="img-thumbnail">
+            <img class="rounded" src="./img/a3.jpg" style="max-width:100%">
+            <h3>優格</h3>
+            <p>我們的優格是一款健康美味的飲品，富含豐富的乳酸菌和蛋白質，有助於改善消化系統功能和提供身體所需營養。每一口都是對您健康的關懷，讓您享受美味同時為身體添上美好滋養！</p>
+            <p><a class="=btn btn-info" href="#yogurt">查看更多 &raquo</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <a name="juice">
+      <h2 style="background-color: #f0dcdd; margin-bottom: 0;">果汁系列</h2>
+    </a>
+    <section class="product" style="background-color: #f0dcdd; padding-bottom: 60px;">
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/b1.jpg">
+        <h3>碧綠果汁</h3>
+        <p>芹菜+蘋果+蜂蜜</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/b2.jpg">
+        <h3>橙橘果汁</h3>
+        <p>胡蘿蔔+蘋果+柳橙</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/b3.jpg">
+        <h3>鮮紅果汁</h3>
+        <p>甜菜根+蘋果+黃瓜</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/b4.jpg">
+        <h3>粉紅果汁</h3>
+        <p>草莓+牛奶</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/b5.jpg">
+        <h3>金黃果汁</h3>
+        <p>柳橙+養樂多</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/b6.jpg">
+        <h3>桃紅果汁</h3>
+        <p>火龍果+香蕉</p>
+      </div>
+    </section>
+    <br><br><br>
+    <div class="container" style="background-color: #d1e6db;margin-bottom: 80px;">
+      <a name="smoothie">
+        <h2>果昔系列</h2>
+      </a>
+      <section class="product">
+        <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+          <img src="./img/c1.jpg">
+          <h3>奇異果果昔</h3>
+          <p>高維生素C、高纖維、低熱量、<br>
+            豐富的礦物質</p>
+        </div>
+        <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+          <img src="./img/c2.jpg">
+          <h3>黑莓果昔</h3>
+          <p>高維生素C、高纖維、高抗氧化、<br>
+            有益心血管健康</p>
+        </div>
+        <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+          <img src="./img/c3.jpg">
+          <h3>覆盆莓果昔</h3>
+          <p>高維生素C、高纖維、高抗氧化、<br>
+            有助於控制血糖</p>
+        </div>
+      </section>
+    </div>
+
+    <a name="yogurt">
+      <h2 style="background-color:antiquewhite;margin-bottom: 0px;">優格系列</h2>
+    </a>
+    <section class="product" style="background-color: antiquewhite;">
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/d1.jpg">
+        <h3>香蕉優格</h3>
+        <p>香蕉+番茄+堅果</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/d2.jpg">
+        <h3>草莓優格</h3>
+        <p>草莓+覆盆子+堅果</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/d3.jpg">
+        <h3>奇異果優格</h3>
+        <p>奇異果+堅果</p>
+      </div>
+      <div class="wow animate__animated animate__fadeIn" data-wow-duration="1.5s">
+        <img src="./img/d4.jpg">
+        <h3>藍莓優格</h3>
+        <p>藍莓+黑莓+奇亞子</p>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- icon -->
+  <div class="icon">
+    <a href="#"><i class="fa-brands fa-facebook" style="color: #4267B2; "></i></a>
+    <a href="#"><i class="fa-brands fa-instagram" style="color: #E1306C; "></i></a>
+    <a href="#"><i class="fa-brands fa-line" style="color: #06c755; "></i></a>
+    <p>
+      台中市南屯區公益路二段51號18樓<br>
+      Tel : (04) 1234-5678
+    </p>
+  </div>
+
+  <a href="#" id="pagetop"><img src="./img/top.png"></a>
+  <footer>
+    copyright &nbsp;&nbsp;&nbsp;&copy;Fresh Drink. All right reserved.&nbsp;&nbsp;&nbsp;僅供上課用途使用。
+  </footer>
+
+  <script src="./js/wow.min.js"></script>
+  <script>
+    new WOW().init();
+  </script>
+
+
+</body>
+
+</html>

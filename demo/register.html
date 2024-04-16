@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>個人小專題</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    </link>
+    
+    </link>
+
+    <style>
+        header {
+            background-color: #fef5d4;
+            height: 80px;
+            width: 100%;
+
+        }
+
+        header ul {
+            position: absolute;
+            right: 5vw;
+            top: 0;
+            line-height: 80px;
+            letter-spacing: 4px;
+        }
+
+        header li {
+            display: inline;
+            margin-right: 4vw;
+        }
+
+        header a {
+            color: #e79e50;
+            text-decoration: none;
+            padding: 10px;
+            font-size: 16px;
+        }
+
+        header a:hover {
+            text-decoration: underline;
+            color: #e79e50;
+        }
+
+
+        body,
+        blockquote {
+            font-family: "Microsoft yahei";
+        }
+
+        .form-group {
+            padding: 10px;
+        }
+
+        .col-12>a {
+            font-size: 20px;
+            padding: 0px 10px;
+        }
+
+
+
+        /* icon */
+        .icon {
+            height: 130px;
+            padding: 10px;
+            text-align: center;
+            background-color: #b0beaf;
+        }
+
+        .icon>a {
+            width: 10%;
+            text-align: right;
+            font-size: 24px;
+            /*調整icon大小*/
+            padding: 10px;
+            /*調整icon間距*/
+        }
+
+        .icon>p {
+            color: white;
+            padding: 10px;
+        }
+
+
+        footer {
+            background-color: #b0beaf;
+            color: white;
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 14px;
+        }
+
+        #pagetop {
+            position: fixed;
+            /*固定定位*/
+            right: 20px;
+            /*右邊界*/
+            bottom: 20px;
+            /*下邊界*/
+            display: block;
+            /*顯示為塊級元素*/
+            width: 80px;
+            /*寬度*/
+            height: 80px;
+            /*高度*/
+            line-height: 80px;
+            /*行高*/
+            text-align: center;
+            /*文字置中*/
+            text-decoration: none;
+            /*移除底線*/
+        }
+
+        @media (max-width:776px) {
+            header {
+                background-color: #fef5d4;
+                height: 160px;
+                width: 100%;
+            }
+
+            ul {
+                margin-top: 80px;
+            }
+
+        }
+
+        .class input{
+           padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <a href="./index.html"><img src="./img/logo.png" style="position:relative;left:40px;"></a>
+
+        <nav>
+            <ul>
+                <a href="./about.html">關於我們</a>
+                <a href="./product.html">產品專區</a>
+                <a href="./store.html">店鋪資訊</a>
+                <a href="./members.html">會員專區</a>
+            </ul>
+        </nav>
+    </header>
+
+    <main style="background-image: url(./img/bg.gif);">
+        <h2 style="text-align: center; padding: 30px; margin-top: 0;">加入會員</h2>
+        <div class="container"
+            style="background-color:rgb(245, 206, 199,0.8); height: 600px ; width:600px; margin-bottom: 80px; font-family:'Microsoft yahei';">
+            <div class="row" style="padding: 30px 60px; ">
+                <div class="col-12">
+
+                    <form id="register_form" role="form" data-toggle="validator">
+                        <div class="form-group">
+                            <input id="name" name="name" type="text" class="form-control" placeholder="姓名"
+                                required="required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input id="email" name="email" class="form-control" type="email" placeholder="電子郵件地址"
+                                data-error="郵件格式錯誤" required="required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input id="inputPassword" name="inputPassword" class="form-control" type="password"
+                                placeholder="設定密碼" pattern="^(?=.*\d)(?=.*[a-zA-Z]).{6,}$"
+                                data-error="請輸入含有英文字母及數字的密碼，至少六個字元。" required="required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <div class="form-group">
+                            <input id="ConfirmPassword" name="ConfirmPassword" class="form-control" type="password"
+                                placeholder="確認密碼" data-match="#inputPassword" data-error="密碼未吻合！" required="required">
+                            <div class="help-block with-errors"></div>
+                        </div>
+                        <button onclick="myfunction()" class="col-12 btn btn-outline-danger" type="button">註冊</button>
+                    </form>
+
+                    <hr>
+                    <div class="col-12" style="text-align: center;">
+                        <p>使用其他方式註冊</p>
+                        <a href="#"><i class="fa-brands fa-facebook" style="color: #4267B2;"></i></a>
+                        <a href="#"><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20"
+                                viewBox="0,0,256,256">
+                                <g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt"
+                                    stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray=""
+                                    stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none"
+                                    text-anchor="none" style="mix-blend-mode: normal">
+                                    <g transform="translate(1.06667,-20.8) scale(5.33333,5.33333)">
+                                        <path
+                                            d="M43.611,20.083h-1.611v-0.083h-18v8h11.303c-1.649,4.657 -6.08,8 -11.303,8c-6.627,0 -12,-5.373 -12,-12c0,-6.627 5.373,-12 12,-12c3.059,0 5.842,1.154 7.961,3.039l5.657,-5.657c-3.572,-3.329 -8.35,-5.382 -13.618,-5.382c-11.045,0 -20,8.955 -20,20c0,11.045 8.955,20 20,20c11.045,0 20,-8.955 20,-20c0,-1.341 -0.138,-2.65 -0.389,-3.917z"
+                                            fill="#ffc107"></path>
+                                        <path
+                                            d="M6.306,14.691l6.571,4.819c1.778,-4.402 6.084,-7.51 11.123,-7.51c3.059,0 5.842,1.154 7.961,3.039l5.657,-5.657c-3.572,-3.329 -8.35,-5.382 -13.618,-5.382c-7.682,0 -14.344,4.337 -17.694,10.691z"
+                                            fill="#ff3d00"></path>
+                                        <path
+                                            d="M24,44c5.166,0 9.86,-1.977 13.409,-5.192l-6.19,-5.238c-2.008,1.521 -4.504,2.43 -7.219,2.43c-5.202,0 -9.619,-3.317 -11.283,-7.946l-6.522,5.025c3.31,6.477 10.032,10.921 17.805,10.921z"
+                                            fill="#4caf50"></path>
+                                        <path
+                                            d="M43.611,20.083h-1.611v-0.083h-18v8h11.303c-0.792,2.237 -2.231,4.166 -4.087,5.571c0.001,-0.001 0.002,-0.001 0.003,-0.002l6.19,5.238c-0.438,0.398 6.591,-4.807 6.591,-14.807c0,-1.341 -0.138,-2.65 -0.389,-3.917z"
+                                            fill="#1976d2"></path>
+                                    </g>
+                                </g>
+                            </svg>
+                        </a>
+                        <a href="#"><i class="fa-brands fa-line" style="color: #06c755;"></i></a>
+
+                    </div>
+                    <a href="./members.html" style="float: right;">已有會員?</a>
+                </div>
+            </div>
+
+
+        </div>
+        <h2 style="text-align: center;padding: 20px; margin: 0;"></h2>
+    </main>
+
+
+    <!-- icon -->
+    <div class="icon">
+        <a href="#"><i class="fa-brands fa-facebook" style="color: #4267B2; "></i></a>
+        <a href="#"><i class="fa-brands fa-instagram" style="color: #E1306C; "></i></a>
+        <a href="#"><i class="fa-brands fa-line" style="color: #06c755; "></i></a>
+        <p>
+            台中市南屯區公益路二段51號18樓<br>
+            Tel : (04) 1234-5678
+        </p>
+    </div>
+
+    <a href="#" id="pagetop"><img src="./img/top.png"></a>
+    <footer>
+        copyright &nbsp;&nbsp;&nbsp;&copy;Fresh Drink. All right reserved.&nbsp;&nbsp;&nbsp;僅供上課用途使用。
+    </footer>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
+
+    <!--執行 Validator-->
+    <script>
+        // $('#register_form').validator().on('submit', function (e) {
+        //     if (e.isDefaultPrevented()) { // 未驗證通過 則不處理
+        //         return;
+        //     } else { // 通过后，送出表单
+        //         alert("已送出表單");
+        //     }
+        //     e.preventDefault(); // 防止原始 form 提交表单
+        // });
+
+        function myfunction() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var inputPassword = document.getElementById('inputPassword').value;
+            var ConfirmPassword = document.getElementById('ConfirmPassword').value;
+
+
+            if (inputPassword==0 && ConfirmPassword==0) {
+                alert("請填寫資料");
+                return;
+            }
+            else {
+            }
+
+            if (inputPassword == ConfirmPassword && inputPassword != 0) {
+                var newPassword = inputPassword;
+            }
+            else {
+                alert('兩次密碼輸入不同，請重新確認');
+                return;
+            }
+
+
+            if (name == false || email == false) {
+                alert("請輸入姓名/電子信箱");
+                return;
+            }
+            else {
+                var nameEmail = 1;
+            }
+
+            if (newPassword == false && nameEmail == false) {
+                alert("請重新輸入");
+                return;
+            }
+            else {
+                alert('註冊成功，請重新登入');
+                history.back();
+            }
+        }
+    </script>
+
+</body>
+
+</html>
